@@ -85,8 +85,8 @@ This workflow automatically triggers whenever a tag matching the pattern `v**` (
 To trigger a new code generation for all services:
 
 ```bash
-git tag v1.0.0  # Use your desired version
-git push origin v1.0.0
+git tag -a golang/order/v1.0.0 -m "golang/order/v1.0.0"
+git push --tags
 ```
 
 This approach allows you to update all service definitions at once with a single tag push, after which the GitHub Actions workflow handles the code generation and tagging for each individual service.
