@@ -21,6 +21,7 @@ go mod init \
 go mod tidy
 cd ../../
 git add . && git commit -am "proto update" || true
+git pull --rebase origin main || true
 git push origin HEAD:main
 git tag -fa golang/${SERVICE_NAME}/${RELEASE_VERSION} \
     -m "golang/${SERVICE_NAME}/${RELEASE_VERSION}"
